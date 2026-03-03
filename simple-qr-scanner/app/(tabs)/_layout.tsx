@@ -4,17 +4,23 @@ import { Text } from 'react-native';
 export default function TabLayout() {
   return (
     <Tabs screenOptions={{ 
-      headerShown: true,
-      tabBarStyle: { backgroundColor: 'black', borderTopWidth: 0 },
+      headerShown: false,
+      tabBarStyle: { backgroundColor: 'black', borderTopWidth: 1, borderTopColor: '#333' },
       tabBarActiveTintColor: '#00FF00',
+      tabBarInactiveTintColor: 'gray',
     }}>
       <Tabs.Screen 
         name="index" 
         options={{ 
           title: 'Scanner',
-          headerStyle: { backgroundColor: 'black' },
-          headerTintColor: 'white',
-          tabBarIcon: () => <Text>📷</Text> 
+          tabBarIcon: ({ color }) => <Text>📷</Text> 
+        }} 
+      />
+      <Tabs.Screen 
+        name="history" 
+        options={{ 
+          title: 'History',
+          tabBarIcon: ({ color }) => <Text>🕒</Text> 
         }} 
       />
     </Tabs>
