@@ -3,7 +3,6 @@ import { View, Text, FlatList, TouchableOpacity, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from 'expo-router';
 
-// Define what our history data looks like
 interface HistoryItem {
   id: string;
   data: string;
@@ -13,7 +12,6 @@ interface HistoryItem {
 export default function HistoryScreen() {
   const [history, setHistory] = useState<HistoryItem[]>([]);
 
-  // useFocusEffect runs every time the user navigates to this specific tab
   useFocusEffect(
     useCallback(() => {
       loadHistory();
@@ -46,19 +44,21 @@ export default function HistoryScreen() {
   };
 
   return (
-    <View>
-      <View >
-        <Text>Scan History</Text>
+    <View className="flex-1 bg-zinc-950 p-4">
+      {/* Header Area */}
+      <View className="flex-row justify-between items-center mb-6 mt-4">
+        <Text className="text-3xl font-bold text-white">Scan History</Text>
         {history.length > 0 && (
-          <TouchableOpacity onPress={clearHistory}>
-            <Text>Clear All</Text>
+          <TouchableOpacity onPress={clearHistory} className="bg-red-500/20 px-4 py-2 rounded-lg">
+            <Text className="text-red-500 font-semibold">Clear All</Text>
           </TouchableOpacity>
         )}
       </View>
 
+      {/* List Area */}
       {history.length === 0 ? (
-        <View>
-          <Text>No QR codes scanned yet.</Text>
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-zinc-500 text-lg">No QR codes scanned yet.</Text>
         </View>
       ) : (
         <FlatList
@@ -66,9 +66,9 @@ export default function HistoryScreen() {
           keyExtractor={(item) => item.id}
           showsVerticalScrollIndicator={false}
           renderItem={({ item }) => (
-            <View>
-              <Text>{item.date}</Text>
-              <Text selectable={true}>
+            <View className="bg-zinc-900 p-4 mb-3 rounded-xl border border-zinc-800">
+              <Text className="text-green-400 text-xs mb-1 font-bold uppercase tracking-wider">{item.date}</Text>
+              <Text className="text-white text-base" selectable={true}>
                 {item.data}
               </Text>
             </View>
