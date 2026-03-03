@@ -2,6 +2,8 @@ import { Stack } from 'expo-router';
 // import { useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 
+import '../global.css';
+
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
