@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "scheme": "simpleqrscanner",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    // "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
@@ -14,7 +14,7 @@
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE"
       },
-      "edgeToEdgeEnabled": true,
+      // "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "package": "com.rivindusl.simpleqrscanner"
     },
