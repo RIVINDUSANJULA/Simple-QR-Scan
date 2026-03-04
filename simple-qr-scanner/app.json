@@ -7,7 +7,8 @@
     "scheme": "simpleqrscanner",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rivindusl.simpleqrscanner"
     },
     "android": {
       "adaptiveIcon": {
@@ -40,7 +41,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "a40cc795-818d-490b-b9de-6495caa95acb"
+        "projectId": "b260b034-7838-4fc8-ae5f-d3445b26ade4"
       }
     }
   }
