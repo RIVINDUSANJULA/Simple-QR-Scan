@@ -6,7 +6,6 @@
     "orientation": "portrait",
     "scheme": "simpleqrscanner",
     "userInterfaceStyle": "automatic",
-    // "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
@@ -14,7 +13,6 @@
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE"
       },
-      // "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "package": "com.rivindusl.simpleqrscanner"
     },
@@ -42,7 +40,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "b260b034-7838-4fc8-ae5f-d3445b26ade4"
+        "projectId": "a40cc795-818d-490b-b9de-6495caa95acb"
       }
     }
   }
